@@ -6,7 +6,7 @@
       <div class="col-md-12">
         <app-recipe-list *ngIf="loadedFeature === 'recipe'"></app-recipe-list>
         <!-- <app-recipe-item></app-recipe-item> -->
-        <app-shopping-list *ngElse></app-shopping-list>
+        <app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list>
       </div>
     </div> 
 </div>
