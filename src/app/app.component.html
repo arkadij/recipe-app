@@ -4,9 +4,11 @@
   <app-navbar (featureSelected)="onNav($event)"></app-navbar>
     <div class="row">
       <div class="col-md-12">
-        <app-recipe-list *ngIf="loadedFeature === 'recipe'"></app-recipe-list>
-        <!-- <app-recipe-item></app-recipe-item> -->
-        <app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list>
+        <!-- <app-content *ngIf="loadedFeature === 'content'"></app-content>
+        <app-shopping-list *ngIf="loadedFeature !== 'content'"></app-shopping-list>
+       -->
+       <app-content></app-content>
+       <app-shopping-list></app-shopping-list>
       </div>
     </div> 
 </div>

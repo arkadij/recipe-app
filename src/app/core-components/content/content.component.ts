@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Recipe } from '../recipe/recipe.model';
 
 @Component({
   selector: 'app-content',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
-
+  selectedRecipe: Recipe;
   constructor() { }
 
   ngOnInit(): void {

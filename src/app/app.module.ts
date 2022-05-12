@@ -10,6 +10,7 @@ import { RecipeItemComponent } from './core-components/recipe/recipe-item/recipe
 import { RecipeDetailComponent } from './core-components/recipe/recipe-detail/recipe-detail.component';
 import { ContentComponent } from './core-components/content/content.component';
 import { NavbarComponent } from './core-components/navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NavbarComponent } from './core-components/navbar/navbar.component';
     NavbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
