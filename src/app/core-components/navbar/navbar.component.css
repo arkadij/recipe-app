@@ -7,3 +7,10 @@
 .navbar a:hover{
     color:#d4f8d8;
 }
+.custom-dropdown{
+    background-color: #40445a;
+    color:#f2f2f2;
+}
+.custom-dropdown:active{
+    background-color:#2ed574;
+}
