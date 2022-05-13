@@ -12,7 +12,8 @@ export class RecipeListComponent implements OnInit {
 
   recipes: Recipe[] = [
     new Recipe('A Test Recipe', 'this is a dummy', 'https://picsum.photos/200/300'),
-    new Recipe('Another  Recipe', 'this is a dummy too', 'https://picsum.photos/200/300')  ];
+    new Recipe('Another  Recipe', 'this is a dummy too', 'https://picsum.photos/200/300')  
+  ];
   constructor() { }
 
   ngOnInit(): void {
