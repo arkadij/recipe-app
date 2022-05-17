@@ -8,10 +8,10 @@ import { ShoppingListEditComponent } from './core-components/shopping/shopping-l
 import { RecipeListComponent } from './core-components/recipe/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './core-components/recipe/recipe-item/recipe-item.component';
 import { RecipeDetailComponent } from './core-components/recipe/recipe-detail/recipe-detail.component';
-import { ContentComponent } from './core-components/content/content.component';
 import { NavbarComponent } from './core-components/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { RecipeComponent } from './core-components/recipe/recipe.component';
 
 @NgModule({
   declarations: [
@@ -22,9 +22,9 @@ import { DropdownDirective } from './shared/dropdown.directive';
     RecipeListComponent,
     RecipeItemComponent,
     RecipeDetailComponent,
-    ContentComponent,
     NavbarComponent,
-    DropdownDirective
+    DropdownDirective,
+    RecipeComponent
   ],
   imports: [
     BrowserModule,
