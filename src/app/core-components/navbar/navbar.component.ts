@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
   onSelect(feature:string){
-    this.featureSelected.emit[feature];
+    this.featureSelected.emit(feature);
     console.log(feature);
   }
 }
