@@ -13,7 +13,7 @@ import { PageNotFoundComponent } from "./page-not-found/page-not-found.component
 const appRoutes: Routes = [
     {
         path:'',
-        redirectTo: '/start',
+        redirectTo: '/recipes',
         pathMatch: 'full'
     },
     {
@@ -25,17 +25,21 @@ const appRoutes: Routes = [
                 component:StartComponent
             },
             {
-                path: ':id',
-                component: RecipeDetailComponent
-            },
-            {
                 path: 'recipe-list',
                 component: RecipeListComponent
             },
             {
                 path: 'add-new-recipe',
                 component: AddNewRecipeComponent
-            } 
+            },
+            {
+                path: ':id',
+                component: RecipeDetailComponent
+            },
+            {
+                path: ':id/new-recipe-edit',
+                component: AddNewRecipeComponent
+            }  
         ]
     },
     {
