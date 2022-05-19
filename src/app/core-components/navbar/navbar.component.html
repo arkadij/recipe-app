@@ -6,22 +6,22 @@
             (click)="collapsed = !collapsed">
             <span class="icon-bar" *ngFor="let iconBar of [1, 2, 3]"></span>
             </button>
-           <a class="navbar-brand" href="#">Recipe Book</a>
+           <a class="navbar-brand" [routerLink]="['/']" routerLinkActive="router-link-active" >Recipe Book</a>
                 
         </div>
         <!-- nav -->
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#" (click)="onSelect('recipe')">Recipes</a></li>
-                <li><a href="#" (click)="onSelect('shoppingList')">Shopping List</a></li>
+                <li><a [routerLink]="['/recipes']" routerLinkActive="active">Recipes</a></li>
+                <li><a [routerLink]="['/shopping-list']" routerLinkActive="active">Shopping List</a></li>
             </ul>
             <!-- dropdown -->
             
                 <ul class="nav navbar-nav navbar-right">
                     <li appDropdown class="dropdown">
-                        <a href="#" class="custom-dropdown dropdown-toggle" role="button">Manage <span class="caret"></span></a>
+                        <a  class="custom-dropdown dropdown-toggle" role="button">Manage <span class="caret"></span></a>
                         <ul class="custom-dropdown dropdown-menu">
-                            <li><a href="#">Save</a></li>
+                            <li><a >Save</a></li>
                         </ul>
                     </li>
                 </ul>

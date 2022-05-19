@@ -18,7 +18,6 @@ export class RecipeComponent implements OnInit {
         this.recipeService.recipeSelected.subscribe(
             (recipe: Recipe) => {
                 this.selectedRecipe = recipe;
-                console.log(recipe);
             }
         );
      }

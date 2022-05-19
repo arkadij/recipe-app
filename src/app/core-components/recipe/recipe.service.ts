@@ -14,7 +14,15 @@ export class RecipeService {
             'https://picsum.photos/200/300',
             [
                 new Ingredient('Meat', 1)
-            ])
+            ]),
+        new Recipe(
+            'A second Recipe',
+            'also a dummy',
+            'https://picsum.photos/200/300',
+            [
+                new Ingredient('fish', 2)
+            ]
+        )    
       ];
       constructor(private shoppingListService: ShoppingListService) { }
       

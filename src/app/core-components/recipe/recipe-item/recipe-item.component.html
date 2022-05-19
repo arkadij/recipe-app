@@ -1,22 +1,13 @@
-<!-- recipe ITEM component -->
-<div class="row">
-    <div class="col-md-7">
-        <a href="#"
-        (click)="onSelected()" 
-        class="list-group-item clearfix">
-         <div class="pull-left">
-             <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
-             <p class="list-group-item-text">{{ recipe.description }}</p>
-         </div>
-         <span class="pull-right">
-             <img src="{{ recipe.imagePath }}" 
-             alt="{{ recipe.name }}" 
-             class="img-responsive" 
-             style="max-height:120px;">
-         </span>
-        </a>
+<a class="list-group-item clearfix"
+   style="cursor: pointer">
+    <div class="pull-left">
+        <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+        <p class="list-group-item-text">{{ recipe.description }}</p>
     </div>
-    <div class="col-md-7">
-        <!-- <app-recipe-detail></app-recipe-detail> -->
-    </div>
-</div>
+    <span class="pull-right">
+        <img [src]="recipe.imagePath" 
+        alt="{{ recipe.name }}" 
+        class="img-responsive" 
+        style="max-height:120px;">
+    </span>
+</a>
