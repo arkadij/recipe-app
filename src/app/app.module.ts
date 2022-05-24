@@ -12,11 +12,11 @@ import { RecipeDetailComponent } from './core-components/recipe/recipe-detail/re
 import { NavbarComponent } from './core-components/navbar/navbar.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { RecipeComponent } from './core-components/recipe/recipe.component';
-import { ShoppingListService } from './core-components/shopping/shopping-list.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AddNewRecipeComponent } from './core-components/recipe/add-new-recipe/add-new-recipe.component';
 import { StartComponent } from './core-components/recipe/start/start.component';
+
 
 @NgModule({
   declarations: [
@@ -33,14 +33,13 @@ import { StartComponent } from './core-components/recipe/start/start.component';
     PageNotFoundComponent,
     AddNewRecipeComponent,
     StartComponent,
-    
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule
   ],
-  providers: [ShoppingListService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
