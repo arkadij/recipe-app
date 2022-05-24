@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-xs-12">
-        <form>
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
             <div class="row">
                 <div class="col-sm-5 form-group">
                     <label for="">Name</label>
@@ -8,8 +8,12 @@
                     type="text" 
                     id="name" 
                     class="form-control"
-                    #nameInput
+                    name="name"
+                    ngModel
+                    required
+                    [pattern]="'^[A-Za-z]*$'"
                     >
+                <span *ngIf="">The Values you entered are invalid.</span>    
                 </div>
                 <div class="col-sm-2 form-group">
                     <label for="">amount</label>
@@ -17,22 +21,35 @@
                     type="number" 
                     id="amount" 
                     class="form-control"
-                    #amountInput
+                    name="amount"
+                    ngModel
+                    required
+                    [pattern]="'^[1-9]+[0-9]*$'"
                     >
                 </div>
+                <!-- <div class="col-sm-2 form-group">
+                    <label for="">Unit</label>
+                    <select>
+                        <option value="grams">g</option>
+                        <option value="grams">ml</option>
+                        <option value="grams">cm</option>
+                    </select>
+                </div> -->
             </div>
+
+            
             <div class="flex row">
                 <div class="flex btn-group col-xs-12">
                     <!-- Add -->
                     <button 
                     class="btn btn-success"
-                    (click)="addItem()"
-                    
-                    >Add</button>
+                    [disabled]="!f.valid"
+                    >{{editMode ? 'Update' :  'Add'}}</button>
                     <!-- Delete -->
-                    <button 
+                    <button
+                    *ngIf="editMode" 
                     class="btn btn-danger"
-                    (click)="delFromRecipe()"
+                    (click)="onDelete()"
                     >Delete</button>
                     <!-- Clear -->
                     <button 

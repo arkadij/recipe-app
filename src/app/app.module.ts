@@ -16,6 +16,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AppRoutingModule } from './app-routing.module';
 import { AddNewRecipeComponent } from './core-components/recipe/add-new-recipe/add-new-recipe.component';
 import { StartComponent } from './core-components/recipe/start/start.component';
+import { RecipeEditComponent } from './core-components/recipe/recipe-edit/recipe-edit.component';
+
 
 
 @NgModule({
@@ -33,6 +35,7 @@ import { StartComponent } from './core-components/recipe/start/start.component';
     PageNotFoundComponent,
     AddNewRecipeComponent,
     StartComponent,
+    RecipeEditComponent,
   ],
   imports: [
     BrowserModule,
